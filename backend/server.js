@@ -16,7 +16,8 @@ const server = http.createServer((req, res) => {
       '--port=8080',
       '--format=MJPEG',
       '--resolution=1280x720',
-      '--desired-fps=15'
+      '--desired-fps=15',
+      '--exit-on-no-clients=30'
      ], { stdio: 'ignore' });
       camera.on('exit', () => { camera = null; });
     }
